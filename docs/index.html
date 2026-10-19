@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#111111">
+  <title>Staffie Sense</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="stage">
+    <video id="video" playsinline muted autoplay></video>
+    <canvas id="overlay"></canvas>
+
+    <section id="labelCard" aria-live="polite">
+      <div class="row">
+        <span id="stateLabel" class="state state-unclear">Not started</span>
+        <span id="calibBadge" class="badge">not calibrated</span>
+      </div>
+      <div id="reason" class="reason">Tap Start and point the camera at your dog.</div>
+      <div class="conf"><div id="confBar"></div></div>
+    </section>
+
+    <div id="banner" hidden></div>
+    <pre id="debug" hidden></pre>
+
+    <div id="startOverlay">
+      <button id="startBtn" class="big">Start</button>
+      <p class="hint">Uses the rear camera. Nothing leaves your phone.</p>
+    </div>
+  </main>
+
+  <nav id="controls">
+    <button id="stopBtn" disabled>Stop</button>
+    <button id="calibBtn" disabled>Calibrate</button>
+    <button id="debugBtn">Debug</button>
+    <button id="csvBtn" disabled>CSV</button>
+    <button id="settingsBtn">Settings</button>
+    <button id="infoBtn" aria-label="About this app">Info</button>
+  </nav>
+
+  <dialog id="infoDialog">
+    <h2>Before you start</h2>
+    <p>Staffie Sense reads <strong>visible body-language signals</strong> (how much your dog moves, how his body is held, sudden stillness). It does <strong>not</strong> read emotions, and the same signal can mean different things in different situations. Context matters.</p>
+    <p>It is <strong>not</strong> a safety or behaviour-assessment tool. Don't use it to decide whether your dog, or anyone near him, is safe in a situation.</p>
+    <p>This is an early proof of concept. It sees a box around the dog and the motion inside it. It can't yet see ears, tail, eyes or mouth.</p>
+    <p>Everything runs on this phone. No video or data is uploaded.</p>
+    <form method="dialog"><button class="big">Got it</button></form>
+  </dialog>
+
+  <dialog id="settingsDialog">
+    <h2>Settings</h2>
+    <label>Dog's name <input id="dogName" type="text" maxlength="30"></label>
+    <label>Sensitivity
+      <select id="sensitivity">
+        <option value="low">Low</option>
+        <option value="normal">Normal</option>
+        <option value="high">High</option>
+      </select>
+    </label>
+    <label>Detector
+      <select id="modelKey">
+        <option value="lite0">Fast (EfficientDet-Lite0, 7 MB)</option>
+        <option value="lite2">Accurate (EfficientDet-Lite2, 12 MB)</option>
+      </select>
+    </label>
+    <div id="baselineInfo" class="small"></div>
+    <div class="btnrow">
+      <button id="exportBtn" type="button">Export baseline</button>
+      <label class="filebtn">Import baseline<input id="importFile" type="file" accept="application/json,.json"></label>
+      <button id="clearBtn" type="button">Clear baseline</button>
+    </div>
+    <form method="dialog"><button class="big">Done</button></form>
+  </dialog>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

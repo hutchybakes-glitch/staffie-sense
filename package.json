@@ -1,0 +1,18 @@
+{
+  "name": "staffie-sense",
+  "version": "0.1.0",
+  "description": "Proof of concept: on-device dog body-language reader for iPhone Safari",
+  "scripts": {
+    "test": "node --test tests/unit.test.mjs",
+    "serve": "http-server docs -p 8080 -c-1",
+    "e2e": "node tests/e2e.mjs"
+  },
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "@mediapipe/tasks-vision": "1.0.1",
+    "http-server": "14.1.1",
+    "playwright": "1.63.0"
+  },
+  "private": true
+}

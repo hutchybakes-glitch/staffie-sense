@@ -1,0 +1,10 @@
+node_modules/
+# Private media, recordings, calibration exports and test output: never commit
+private/
+clips/
+labels.csv
+*.mjpeg
+*.y4m
+staffie-sense-*.csv
+staffie-sense-baseline-*.json
+test-results/
