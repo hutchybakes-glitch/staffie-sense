@@ -2,7 +2,7 @@
 
 An iPhone web app. You point the rear camera at your Staffie and get a live, **deterministic** read of visible movement and posture signals: **Resting**, **Relaxed**, **Alert**, **Active / excited**, or **Unclear**. Each comes with a one-line reason.
 
-**Live URL:** <https://hutchybakes-glitch.github.io/staffie-sense/>. It goes live once the repo is created and Pages is turned on; see `HUMAN_TODO.md`.
+**Live URL:** <https://swhutchinson.github.io/staffie-sense/>. It goes live once the repo is created and Pages is turned on; see `HUMAN_TODO.md`.
 
 It reads body-language *signals*, not emotions. It's not a safety or behaviour-assessment tool.
 
