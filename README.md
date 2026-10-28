@@ -2,7 +2,7 @@
 
 An iPhone web app. You point the rear camera at your Staffie and get a live, **deterministic** read of visible movement and posture signals: **Resting**, **Relaxed**, **Alert**, **Active / excited**, or **Unclear**. Each comes with a one-line reason.
 
-**Live URL:** <https://swhutchinson.github.io/staffie-sense/>. It goes live once the repo is created and Pages is turned on; see `HUMAN_TODO.md`.
+**Live URL:** <https://swhutchinson.github.io/staffie-sense/>. Open it in Safari on an iPhone and allow the camera.
 
 It reads body-language *signals*, not emotions. It's not a safety or behaviour-assessment tool.
 
@@ -12,7 +12,7 @@ The pipeline: camera → MediaPipe EfficientDet-Lite object detector (the only M
 
 - Everything runs on the phone. There's no backend and no uploads.
 - All runtime files are self-hosted in `docs/`.
-- What it can and can't read is in [SIGNALS.md](SIGNALS.md). The choices behind it are in [DECISIONS.md](DECISIONS.md).
+- What it can and can't read is in [notes/SIGNALS.md](notes/SIGNALS.md). The choices behind it are in [notes/DECISIONS.md](notes/DECISIONS.md).
 
 ## Using it
 

@@ -50,8 +50,8 @@ Working name: **staffie-sense**. You can keep it, or rename it if you have a bet
 - **JavaScript, HTML and CSS:** comment each function and any non-obvious logic.
 - **Work autonomously.**
   - Don't stop to ask questions. Make the best decision and keep going.
-  - Record each decision in `DECISIONS.md`: date, decision, why, and alternatives rejected.
-  - The only things that go to Sam are tasks he physically has to do. List those in `HUMAN_TODO.md`.
+  - Record each decision in `notes/DECISIONS.md`: date, decision, why, and alternatives rejected.
+  - The only things that go to Sam are tasks he physically has to do. List those in `notes/HUMAN_TODO.md`.
 
 ## Product requirements
 
@@ -188,7 +188,7 @@ Link every source. Paraphrase; don't copy text.
   - Uses Sam's labels from `labels.csv` (columns: file, start_s, end_s, label).
   - Outputs per-second predictions, a confusion matrix, per-state precision and recall, and a threshold-tuning report.
   - Changes to `rules.json` from tuning are made deliberately and committed with the evaluation numbers in the commit message. Never auto-fit them silently.
-- **Real-iPhone testing** is Sam's job. Put the checklist in `HUMAN_TODO.md`.
+- **Real-iPhone testing** is Sam's job. Put the checklist in `notes/HUMAN_TODO.md`.
 
 ## Housekeeping
 
@@ -199,4 +199,4 @@ Link every source. Paraphrase; don't copy text.
   - how to calibrate and how to record
   - how to film and label clips for tuning
   - how to run the harness
-- Time-box dead ends. If an approach is stuck after a sensible effort, log it in `DECISIONS.md` and switch to the fallback.
+- Time-box dead ends. If an approach is stuck after a sensible effort, log it in `notes/DECISIONS.md` and switch to the fallback.
